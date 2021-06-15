@@ -27,12 +27,12 @@ Many websites will use what is called CSS grid layouts, where you will have a he
     -->
 
     <nav class="navbar bg-dark text-white p-3 my-3 ">
-        <h1><img src="images/company_logo.png" width="130" height="130"> Welcome to my Physiotherapy Clinic</h1>
+        <h1><img src="images/company_logo.png" width="130" height="130"> Welcome to Animal Clinic</h1>
     </nav>
 
     <div class=" p-3 my-3 border bg-light">
         <h1 class=""> About us</h1>
-        <p class="p-4 my-3" style="font-size: 25px">We are a small clinic located in Smiths Falls Ontario</p>
+        <p class="p-4 my-3" style="font-size: 25px">We are a small clinic located in Ottawa, Ontario</p>
         <p style="font-size: 25px; padding-left: 1.5rem">We are dedicated to providing the <strong>best</strong> care to our customers</p>
     </div>
     <!--
@@ -40,57 +40,71 @@ Many websites will use what is called CSS grid layouts, where you will have a he
     It is a good way to list of prices, or services in a business website
     https://getbootstrap.com/docs/5.0/content/tables/
     -->
-    <table class="table table-info table-hover">
-        <thead>
-            <tr>
-                <th scope="col"><h2>Service</h2></th>
-                <th scope="col"><h2>Description</h2></th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Placeholder 1</td>
-                <td>Placeholder 2</td>
-            </tr>
-            <tr>
-                <td>Placeholder 1</td>
-                <td>Placeholder 2</td>
-            </tr>
-            <tr>
-                <td>Placeholder 1</td>
-                <td>Placeholder 2</td>
-            </tr>
-        </tbody>
-    </table>
-    <h1>Here is an alert!</h1>
-    <!-- Alerts are an easy way to grab the users attention, this page goes into more detail
-    https://getbootstrap.com/docs/5.0/components/alerts/
-    -->
-    <p>This indicated something important in the page</p>
-    <div class="alert alert-danger alert-dismissible fade show" role="alert">
-        <strong>Yikes!</strong> Perhaps you left one of the fields empty for this to appear?
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+
+
+    
+    <h1>Services</h1>
+    <div class="accordion accordion-flush" id="accordionFlushExample">
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingOne">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                    Dentistry
+                </button>
+            </h2>
+            <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">In addition to our medical and surgical services, we are fully equipped with the latest in dental equipment, including digital dental radiography. We offer routine cleanings (prophylaxis) and dental extractions.</div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                    Vaccination
+                </button>
+            </h2>
+            <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">We offer vaccination programs consistent with the American Association of Animal Hospital (AAHA) vaccine guidelines. We carry a range of medications to prevent intestinal worms, heartworm, and external parasites such as fleas, ticks and mange.</div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                    Surgical Care
+                </button>
+            </h2>
+            <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">We provide surgical services ranging from routine spays and neuters to more complex bladder, ear, eye, gastrointestinal, orthopedic and tumour removal procedures. Our veterinarians are experienced surgeons, and we can call upon the services of a mobile specialist if orthopaedic work is needed. We also provide soft tissue surgery and tonometry procedure as well.</div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingFour">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                    Blood Testing and Urinalysis
+                </button>
+            </h2>
+            <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">We have an in-house laboratory and access to off-site veterinary laboratories to complete any necessary testing for your loved one. Our other service includes medical assessments of your pets.</div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingFive">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                    General Medicine
+                </button>
+            </h2>
+            <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">We offer inpatient and outpatient medical treatment for eye, ear, skin, gastrointestinal, respiratory, cardiac, urogenital, renal and hepatic diseases.</div>
+            </div>
+        </div>
     </div>
 
-    <h1>Button States</h1>
-    <!--
-    Buttons can be used for submitting forms, triggering events among many other things.
-    https://getbootstrap.com/docs/5.0/components/buttons/
-    -->
-
-    <button type="button" class="btn btn-warning">Primary Button</button>
-    <button type="button" class="btn btn-warning active">Active Button</button>
-    <button type="button" class="btn btn-warning" disabled>Disabled Button</button>
-
-    <h1>Modal Example</h1>
-
+    <h1>Get Treatment</h1>
     <!-- Button trigger modal
     We use the same button code from above, but now we can trigger a modal to appear.
     The bootstrap tutorial includes many different types of modals that you can explore
     https://getbootstrap.com/docs/5.0/components/modal/
     -->
     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-        Launch demo modal
+        Book In Person Session
     </button>
 
     <!-- Modal -->
@@ -98,27 +112,42 @@ Many websites will use what is called CSS grid layouts, where you will have a he
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Book a Treatment Session</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    In the body we can add various components. In this example some radio buttons
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                        <label class="form-check-label" for="flexRadioDefault1">
-                            Yes
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                        <label class="form-check-label" for="flexRadioDefault2">
-                            No
-                        </label>
-                    </div>
+                    <form action="/action_page.php">
+                        <div class="form-group">
+                            <label for="sel1">Select a Service:</label>
+                            <select class="form-control" id="sel1">
+                              <option>Dentistry</option>
+                              <option>Surgical Care</option>
+                              <option>General Medicine</option>
+                              <option>Vaccination</option>
+                              <option>Blood Testing and Urinalysis</option>
+                            </select>
+                          </div>
+                        <div class="form-group">
+                            <label for="datetime">Select a  date and time for the session:</label>
+                            <input type="datetime-local" id="datetime" name="datetime">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address:</label>
+                            <input type="text" class="form-control" id="email">
+                        </div>                        
+                        <div class="form-group">
+                            <label for="email">Name (First and Last):</label>
+                            <input type="text" class="form-control" id="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Phone Number:</label>
+                            <input type="text" class="form-control" id="email">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                      </form>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
                 </div>
             </div>
         </div>
@@ -130,34 +159,33 @@ Many websites will use what is called CSS grid layouts, where you will have a he
     -->
 
     <h1>Meet the Physicians!</h1>
-    <div class="row justify-content-around">
-        <div class="card" style="width: 18rem;">
-            <img src="images/doctor.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-                <p class="card-text">Here is some filler text, in here you can describe your doctor</p>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+            <div class="card" style="width: 18rem;">
+                <img src="images/doctor.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h4 class="card-title">Jane Kirschoff</h4>
+                    <p class="card-text">Dr. Jane Kirschoff was born and raised in Ottawa. After completing 3 years of a Bachelor of Science degree at Carleton University, she attended the University of Guelph and graduated from the Ontario Veterinary College in 2006.</p>
+                </div>
             </div>
         </div>
-        <div class="card" style="width: 18rem;">
-            <img src="images/doctor.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-                <p class="card-text">Here is some filler text, in here you can describe your doctor</p>
+        <div class="col">
+            <div class="card" style="width: 18rem;">
+                <img src="images/doctor2.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h4 class="card-title">Richard Yaeger</h4>
+                    <p class="card-text">Dr. Richard Yaeger grew up working with cattle, pigs, chickens and dogs. He came to Canada in 1998, and went on to the University of Guelph. He graduated from the Ontario Veterinary College in 2005 and worked in rural mixed practice in Kirkton, ON</p>
+                </div>
             </div>
         </div>
-    </div>
-
-    <!--
-    We can also use buttons to expand some hidden options
-    https://getbootstrap.com/docs/5.0/components/collapse/
-    -->
-    <h1>More Information</h1>
-
-    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-        Button To Expand Options
-    </button>
-
-    <div class="collapse" id="collapseExample">
-        <div class="card card-body">
-            Here we have some hidden data to avoid cluttering the page with information
+        <div class="col">
+            <div class="card" style="width: 18rem;">
+                <img src="images/doctor3.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h4 class="card-title">Lisa Ackermann</h4>
+                    <p class="card-text">Dr. Lisa Ackermann was born and raised in London, Ontario. She graduated from the Ontario Veterinary College at the University of Guelph in 2016.</p>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -165,40 +193,16 @@ Many websites will use what is called CSS grid layouts, where you will have a he
     https://getbootstrap.com/docs/5.0/components/accordion/
     -->
 
-    <div class="accordion accordion-flush" id="accordionFlushExample">
-        <div class="accordion-item">
-            <h2 class="accordion-header" id="flush-headingOne">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                    Accordion Item #1
-                </button>
-            </h2>
-            <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body">I can put information in this area</div>
-            </div>
-        </div>
-        <div class="accordion-item">
-            <h2 class="accordion-header" id="flush-headingTwo">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                    Accordion Item #2
-                </button>
-            </h2>
-            <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body">I can put information in this area</div>
-            </div>
-        </div>
-        <div class="accordion-item">
-            <h2 class="accordion-header" id="flush-headingThree">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                    Accordion Item #3
-                </button>
-            </h2>
-            <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body">I can place information in this area</div>
-            </div>
-        </div>
-    </div>
-
 </div>
+
+<div class="jumbotron jumbotron-fluid bg-info">
+    <div class="container">
+      <h1>Contact Us</h1>
+      <p>Address: 75 Laurier Ave. E, Ottawa, ON K1N 6N5</p>
+      <p>Website Designed by: Wyse Ebbah</p>
+    </div>
+</div>
+
 <!-- here we input our javascript helper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 </body>
