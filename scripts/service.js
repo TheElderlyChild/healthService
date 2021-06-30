@@ -51,6 +51,21 @@ function disableDates(date) {
     return [workdays[doctor][days[date.getDay()]]];
 }
 
+function validatePhone(inputtxt)
+{
+    var value = document.getElementById(inputtxt).value;
+
+    var filter = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+    if(filter.test(value))
+        {
+        return true;
+        }
+    else
+        {
+        return false;
+        }
+}
+
 // HERE, JQuery "LISTENING" starts
 $(document).ready(function(){
 
@@ -59,6 +74,15 @@ $(document).ready(function(){
     // the "addClass" will use the class "error" defined in style.css and add it to the phone input
     // The "error" class in style.css defines yellow background and red foreground
  
+    $("#phoneNo").on("change", function(){
+        if (!validatePhone("phoneNo")){
+            alert("Wrong format for phone. Please use this format: XXX XXX XXXX");
+            $("#phoneNo").addClass("error");
+        }
+        else {
+            $("#phoneNo").removeClass("error");
+        }
+    });
 
     // To change the style of the calender, look in jqueryui.com, under Themes, in the ThemeRoller Gallery
     // You can try different themes (the names are under the calendars) / This is Excite Bike
