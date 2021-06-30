@@ -66,6 +66,26 @@ function validatePhone(inputtxt)
         }
 }
 
+function validateCard(inputtxt)
+{
+    var value = document.getElementById(inputtxt).value;
+
+    var visaRegEx = /^(?:4[0-9]{12}(?:[0-9]{3})?)$/;
+    var mastercardRegEx = /^(?:5[1-5][0-9]{14})$/;
+
+    var isVisa = visaRegEx.test(value) === true;
+    var isMastercard = mastercardRegEx.test(value) === true;
+
+    if(isVisa || isMastercard)
+        {
+        return true;
+        }
+    else
+        {
+        return false;
+        }
+}
+
 // HERE, JQuery "LISTENING" starts
 $(document).ready(function(){
 
@@ -113,6 +133,31 @@ $(document).ready(function(){
     // The class "highlight" used here is predefined in JQuery UI
     // the message of the tooltip is encoded in the input (in the HTML file)
 
+    $("#creditCard").on("change", function(){
+        if (!validateCard("creditCard")){
+            alert("Wrong format for credit card number. Please use either a VISA or Mastercard");
+            $("#creditCard").addClass("error");
+        }
+        else {
+            $("#creditCard").removeClass("error");
+        }
+    });
 
+    $("#creditCard").on("mouseenter", function(){
+        $("#creditCard").addClass("showInput");
+    });
+
+    $("#creditCard").on("mouseleave", function(){
+        $("#creditCard").removeClass("showInput");
+    });
+
+    // https://jqueryui.com/tooltip/
+    // The class "highlight" used here is predefined in JQuery UI
+    // the message of the tooltip is encoded in the input (in the HTML file)
+    $("#creditCard").tooltip({
+        classes: {
+            "ui-tooltip": "highlight"
+        }
+    });
 
 });
